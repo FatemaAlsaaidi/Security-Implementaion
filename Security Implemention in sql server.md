@@ -95,4 +95,21 @@ can be done in SQL Server Management Studio (SSMS) in security section
 by right-clicking on the schema and selecting "Properties", then navigating to the "Permissions" tab to add or deny permissions for the respective users
 For Example:
 !['SalesUserPermission'](SalesUserPermission.JPG)
+**5. Test the Access Control**
+To verify that the access control is working as intended, you can log in as each user and attempt to access the data.
+For example, log in as `HrLogin` and try to select from the `Sales.Customers` table. You should receive an error indicating that access is denied. Similarly, logging in as `SalesLogin` and trying to access `HR.Employees` should also result in an access denied error.
+
+first we need to login with login and password of HrLogin or SalesLogin, then we can execute the following queries to test the access control:
+![Login as HrLogin](HrLogin.JPG)
+```
+-- Connect as HrLogin:
+-- As hr_user
+EXECUTE AS USER = 'HrUser';
+SELECT * FROM HR.Employees;
+SELECT * FROM Sales.Customers;
+```
+HR Access
+![HR Access](HRAccess.JPG)
+HR Not Access
+![HR Not Access](HRNotAccess.JPG)
 
