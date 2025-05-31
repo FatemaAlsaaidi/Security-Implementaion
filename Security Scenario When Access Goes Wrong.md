@@ -61,3 +61,12 @@ Explain how these issues could have been avoided using:
 - Implementing audit logs or restricting role creation would have allowed the database administrator to monitor and control who can create new logins and roles, preventing unauthorized access to sensitive data.
 • Environment separation (dev vs prod) :
 - Implementing environment separation would have ensured that developers like Adil could only access test databases for development purposes, preventing accidental changes to production data.
+
+
+### 4. Lessons Learned 
+• What should developers have access to? 
+- Developers should have access to development and test environments only, with limited permissions that prevent them from making changes to production data. They should be able to perform tasks such as writing and testing code, but not have the ability to delete or modify critical data in production.
+• What should be restricted to DBAs or admins? 
+- Database administrators (DBAs) or admins should have exclusive access to production databases, including the ability to create and manage logins, roles, and permissions. They should also be responsible for implementing security measures, such as schema-level permissions and audit logs, to ensure data integrity and security.
+• Why is "minimum privilege" important?
+- The principle of "minimum privilege" is crucial because it limits the access and permissions granted to users based on their specific roles and responsibilities. This reduces the risk of accidental or malicious actions that could compromise data integrity, security, or confidentiality. By ensuring that users only have the permissions necessary to perform their tasks, organizations can better protect sensitive information and maintain a secure database environment.
