@@ -126,3 +126,18 @@ SELECT * FROM HR.Employees;
 Error cuses setting of perimission which put sales user cannot select data from data by mistics
 ![Wronge with setting the premission
 ](ByMesticsButSalesUserCanNotSelectDataInDatabase.JPG)
+
+## 3. Write a short explanation: 
+
+o Why schema-level security is better than table-by-table permissions 
+Schema-level security is more efficient and manageable than table-by-table permissions for several reasons:
+1. **Centralized Management**: Schema-level permissions allow you to manage access at a higher level, reducing the complexity of managing individual table permissions. This is particularly useful in large databases with many tables.
+2. **Consistency**: By applying permissions at the schema level, you ensure that all tables within that schema inherit the same access rules, reducing the risk of inconsistent permissions across tables.
+3. **Scalability**: As new tables are added to a schema, they automatically inherit the permissions set at the schema level, making it easier to scale the database without needing to reconfigure permissions for each new table.
+4. **Data Segregation**: Schema-level security allows for clear separation of data between different departments or functional areas, which is essential in environments where data privacy and security are critical.
+o How this setup supports data segregation in real-world companies 
+1. Enforces department-based access control
+
+2. Prevents cross-department data leakage
+
+3. Supports principle of least privilege, a key security best practice
