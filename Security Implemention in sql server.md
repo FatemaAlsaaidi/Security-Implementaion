@@ -109,3 +109,12 @@ VALUES
 
 ````
 
+2. Create two schemas: `HR` and `Sales`.
+```sql
+CREATE SCHEMA HR;
+CREATE SCHEMA Sales;
+```
+
+
+
+
