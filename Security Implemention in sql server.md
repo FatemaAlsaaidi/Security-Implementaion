@@ -99,7 +99,8 @@ For Example:
 To verify that the access control is working as intended, you can log in as each user and attempt to access the data.
 For example, log in as `HrLogin` and try to select from the `Sales.Customers` table. You should receive an error indicating that access is denied. Similarly, logging in as `SalesLogin` and trying to access `HR.Employees` should also result in an access denied error.
 
-first we need to login with login and password of HrLogin or SalesLogin, then we can execute the following queries to test the access control:
+** Test as HrLogin:**
+first need to connect as `HrLogin` and then try to access the HR and Sales data.
 ![Login as HrLogin](HrLogin.JPG)
 ```
 -- Connect as HrLogin:
@@ -113,3 +114,15 @@ HR Access
 HR Not Access
 ![HR Not Access](HRNotAccess.JPG)
 
+** Test as SalesLogin:**
+first need to connect as `SalesLogin` and then try to access the HR and Sales data.
+![Login as SalesLogin](SalesLogin.JPG)
+```
+-- Connect as SalesLogin
+EXECUTE AS USER = 'SalesUser';
+SELECT * FROM Sales.Customers;
+SELECT * FROM HR.Employees;
+```
+Error cuses setting of perimission which put sales user cannot select data from data by mistics
+![Wronge with setting the premission
+](ByMesticsButSalesUserCanNotSelectDataInDatabase.JPG)
