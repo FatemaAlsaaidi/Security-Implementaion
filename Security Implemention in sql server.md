@@ -91,3 +91,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::Sales TO SalesUser;
 DENY SELECT ON SCHEMA::HR TO SalesUser;
 
 ```
+can be done in SQL Server Management Studio (SSMS) in security section 
+by right-clicking on the schema and selecting "Properties", then navigating to the "Permissions" tab to add or deny permissions for the respective users
+For Example:
+!['SalesUserPermission'](SalesUserPermission.JPG)
+
