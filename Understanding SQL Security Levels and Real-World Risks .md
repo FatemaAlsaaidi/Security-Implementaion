@@ -48,3 +48,27 @@ Real-world scenarios often involve users making mistakes that can compromise dat
 
 • Meet compliance/audit requirements:
 Many industries have strict compliance and audit requirements that mandate specific access controls and data protection measures. By implementing security levels, you can ensure that your SQL Server environment meets these requirements, reducing the risk of legal penalties and reputational damage.
+
+### Real-World Risks Without Security 
+
+Explain what might happen if: 
+
+• Everyone has full access :
+	If everyone has full access to the SQL Server environment, it can lead to several risks, including:
+	• Data breaches: Unauthorized users may access sensitive information, leading to potential data leaks and loss of confidentiality.
+	• Data corruption: Users may inadvertently or maliciously modify or delete critical data, leading to data integrity issues and potential loss of important information.
+	• Compliance violations: Failing to implement security levels can result in non-compliance with industry regulations, leading to legal penalties and reputational damage.
+	• Increased human error: Without defined security levels, users may inadvertently perform actions that compromise data integrity or security, leading to costly mistakes.
+
+• Developers modify production data:
+	If developers have unrestricted access to modify production data, it can lead to several risks, including:
+	• Data corruption: Developers may inadvertently introduce bugs or errors that corrupt production data, leading to data integrity issues and potential loss of important information.
+	• Service disruptions: Unintended changes to production data can cause application failures or service outages, impacting business operations and customer experience.
+	• Security vulnerabilities: Developers may inadvertently introduce security vulnerabilities by modifying production data without proper testing or validation, leading to potential data breaches and loss of confidentiality.
+
+• Interns access HR data:
+	If interns have access to HR data without proper security levels, it can lead to several risks, including:
+	• Data breaches: Interns may inadvertently or maliciously access sensitive employee information, leading to potential data leaks and loss of confidentiality.
+	• Compliance violations: Failing to restrict access to HR data can result in non-compliance with data protection regulations, leading to legal penalties and reputational damage.
+	• Data integrity issues: Interns may inadvertently modify or delete critical HR data, leading to potential errors in employee records and impacting business operations.
+	• Loss of trust: Unauthorized access to HR data can erode employee trust and morale, leading to a negative workplace culture and potential turnover.
