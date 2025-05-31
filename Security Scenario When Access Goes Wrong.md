@@ -27,3 +27,23 @@ List and describe what went wrong (based on the points above):
 2. **Salary Data Leaked**: Adil created a report containing sensitive salary information and accidentally shared it with an external developer, exposing confidential employee data.
 3. **Unauthorized Role Creation**: Adil created a new SQL login for a junior developer without informing the database administrator, allowing the junior developer to access sensitive HR data that they should not have been able to see.
 4. **Schema Confusion**: Adil created new tables in the wrong schema (dbo instead of HR), leading to permission issues for HR team users who were unable to access the data they needed.
+
+### 2. Root Causes 
+
+Identify the security flaws:
+
+• No separation between development and production:
+
+-Adil had full access to the production database, allowing him to make changes without proper oversight or controls.
+
+• Full access given to developers :
+	
+-Developers were granted unrestricted access to the production database, enabling them to perform actions that could compromise data integrity and security.
+
+• No schema-level restrictions :
+	
+-here were no schema-level restrictions in place, allowing Adil to create tables in the wrong schema and causing permission issues for other users.
+
+• Lack of role-based permission control:
+
+-There was no role-based permission control, allowing Adil to create new logins and grant access to sensitive data without proper authorization.
