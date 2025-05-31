@@ -74,6 +74,20 @@ CREATE TABLE Sales.Customers (
 
 INSERT INTO Sales.Customers VALUES (101, 'Global Corp', 'contact@global.com');
 
+```
 
+**4. Assign schema-level permissions so:**
+```
+-- Grant HR User Access to HR Schema Only
+-- Allow HR user access to HR schema
+GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::HR TO HrUser;
+-- Deny access to Sales schema
+DENY SELECT ON SCHEMA::Sales TO HrUser;
+
+-- Grant Sales User Access to Sales Schema Only
+-- Allow Sales user access to Sales schema
+GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::Sales TO SalesUser;
+-- Deny access to HR schema
+DENY SELECT ON SCHEMA::HR TO SalesUser;
 
 ```
