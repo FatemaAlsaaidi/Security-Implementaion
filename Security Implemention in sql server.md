@@ -54,3 +54,26 @@ CREATE SCHEMA HR AUTHORIZATION HrUser;
 CREATE SCHEMA Sales AUTHORIZATION SalesUser;
 
 ```
+**3. Create a few sample tables inside each schema.**
+```
+-- Inside HR Schema
+CREATE TABLE HR.Employees (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Position VARCHAR(50)
+);
+
+INSERT INTO HR.Employees VALUES (1, 'Alice Johnson', 'HR Manager');
+
+-- Inside Sales Schema
+CREATE TABLE Sales.Customers (
+    CustomerID INT PRIMARY KEY,
+    CustomerName VARCHAR(100),
+    Email VARCHAR(100)
+);
+
+INSERT INTO Sales.Customers VALUES (101, 'Global Corp', 'contact@global.com');
+
+
+
+```
