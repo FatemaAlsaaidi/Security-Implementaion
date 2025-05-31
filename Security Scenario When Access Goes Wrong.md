@@ -70,3 +70,18 @@ Explain how these issues could have been avoided using:
 - Database administrators (DBAs) or admins should have exclusive access to production databases, including the ability to create and manage logins, roles, and permissions. They should also be responsible for implementing security measures, such as schema-level permissions and audit logs, to ensure data integrity and security.
 • Why is "minimum privilege" important?
 - The principle of "minimum privilege" is crucial because it limits the access and permissions granted to users based on their specific roles and responsibilities. This reduces the risk of accidental or malicious actions that could compromise data integrity, security, or confidentiality. By ensuring that users only have the permissions necessary to perform their tasks, organizations can better protect sensitive information and maintain a secure database environment.
+
+### 5. Bonus Activity (Optional) 
+
+simulate: 
+• Creating a role like ReadOnly_Dev and granting only SELECT on a schema.
+```
+create role ReadOnly_Dev;
+grant select on schema::HR to ReadOnly_Dev;
+```
+• Trying to run an INSERT or DELETE command using that limited role to observe 
+permission denial.
+
+```
+delete from HR.Employees;
+```
