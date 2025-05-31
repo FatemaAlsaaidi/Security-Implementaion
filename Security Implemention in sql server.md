@@ -21,18 +21,9 @@ Each department has its own schema in the database.
 	- Sales users cannot access HR data.
 
 *<ins>*Task**
-1.  Create SQL logins and map them to users inside the database.
-<ins> logins
-	-  Create SQL logins for HR and Sales departments.
-```sql
-USE master;
--- Create SQL logins for HR and Sales departments
--- Create login for HR user
-CREATE LOGIN hr_login WITH PASSWORD = 'Hr@12345';
--- Create login for Sales user
-CREATE LOGIN sales_login WITH PASSWORD = 'Sales@12345';
-```
-Or directly in SQL Server Management Studio (SSMS):
+**1.  Create SQL logins and map them to users inside the database.**
+	
+ directly in SQL Server Management Studio (SSMS):
 1. Open SSMS and connect to your SQL Server instance.
 2. In Object Explorer, expand the "Security" node.
 3. Right-click on "Logins" and select "New Login...".
@@ -41,3 +32,25 @@ Or directly in SQL Server Management Studio (SSMS):
 6. Click "OK" to create the login.
 !['login procee'](login.JPG)
 
+Or by use sql script 
+```
+-- ==================================== HR Login and User ================================
+-- Create login for HR
+CREATE LOGIN HrLogin WITH PASSWORD = '123';
+-- Create user in the database for HR
+CREATE USER HrUser FOR LOGIN HrLogin;
+
+-- =================================== Sales Login and User ===================================
+-- Create login for Sales
+CREATE LOGIN SalesLogin WITH PASSWORD = '456';
+-- Create user in the database for Sales
+CREATE USER SalesUser FOR LOGIN SalesLogin;
+```
+**2. Create two schemas: HR and Sales.**
+```
+-- ================================ Schema =======================================
+-- Create schemas
+CREATE SCHEMA HR AUTHORIZATION HrUser;
+CREATE SCHEMA Sales AUTHORIZATION SalesUser;
+
+```
