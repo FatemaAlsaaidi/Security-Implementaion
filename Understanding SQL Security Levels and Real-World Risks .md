@@ -72,3 +72,27 @@ Explain what might happen if:
 	• Compliance violations: Failing to restrict access to HR data can result in non-compliance with data protection regulations, leading to legal penalties and reputational damage.
 	• Data integrity issues: Interns may inadvertently modify or delete critical HR data, leading to potential errors in employee records and impacting business operations.
 	• Loss of trust: Unauthorized access to HR data can erode employee trust and morale, leading to a negative workplace culture and potential turnover.
+
+
+### 4. Summary 
+
+Explain: 
+• How you created logins, users, and schemas:
+	To create logins, users, and schemas in SQL Server, you typically follow these steps:
+	1. Change the mode to Sql Server Authentication: Ensure that your SQL Server instance is set to allow SQL Server authentication, which enables you to create logins and users with specific credentials.
+	2. **create new login**: Use the `CREATE LOGIN` statement to create a new server-level login. This login will be used to connect to the SQL Server instance.
+	3. **create new user**: Use the `CREATE USER` statement to create a database-level user based on the server-level login. This user will have access to a specific database.
+	4. **create new schema**: Use the `CREATE SCHEMA` statement to create a new schema within the database. Schemas are used to group related database objects and can help in managing permissions more effectively.
+
+
+• How schema permission limited access:
+	to schema-level permissions allows you to control access to all objects within a specific schema. By granting permissions at the schema level, you can restrict users from performing actions on objects that they do not have explicit permissions for. This helps in managing access control more effectively and reduces the risk of unauthorized access or modifications to sensitive data.
+	DatabseName >> security >> Schemas >> SchemaName >> Permissions
+	!['Permission Selected'](SalesUserPermissionSelected.jpg)
+
+• How this applies to real companies
+	to real companies, implementing security levels in SQL Server is crucial for protecting sensitive data and ensuring compliance with industry regulations. By applying security levels, companies can:
+	• Restrict access to sensitive information, such as financial records or employee data, ensuring that only authorized personnel can view or modify it.
+	• Prevent unauthorized changes to critical data, reducing the risk of data corruption and maintaining data integrity.
+	• Reduce the risk of human error by restricting access to sensitive actions, ensuring that only trained and authorized personnel can perform critical operations.
+	• Meet compliance and audit requirements, ensuring that the SQL Server environment adheres to industry standards and regulations, reducing the risk of legal penalties and reputational damage.
